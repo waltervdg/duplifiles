@@ -22,7 +22,7 @@ done
 		then
 			echo received "$file", waiting 4 seconds...
 			sleep 4
-			cp "$file" "/dst1_${file:4:1}"
+			cp -p "$file" "/dst1_${file:4:1}"
 			mv "$file" "/dst2_${file:4:1}"
 		fi
 	done
