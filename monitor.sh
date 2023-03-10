@@ -20,9 +20,9 @@ done
 		# Verarbeite nur Dateien ohne Wildcards
 		if [ "$file" == "${file//[\[\]|?+*]/}" ]
 		then
-			echo received "$file", waiting 4 seconds...
-			sleep 4
+			echo received "$file", sending to destination 1...
 			cp -p "$file" "/dst1_${file:4:1}"
+			echo ... and to destination 2...
 			mv "$file" "/dst2_${file:4:1}"
 		fi
 	done
